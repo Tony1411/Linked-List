@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/ASUS/Desktop/Linked-List/double.h
+list.h
+C:/Users/ASUS/Desktop/Linked-List/list.h
+iterator.h
+C:/Users/ASUS/Desktop/Linked-List/iterator.h
+
+C:/Users/ASUS/Desktop/Linked-List/forward.h
+list.h
+C:/Users/ASUS/Desktop/Linked-List/list.h
+iterator.h
+C:/Users/ASUS/Desktop/Linked-List/iterator.h
+node.h
+C:/Users/ASUS/Desktop/Linked-List/node.h
+
+C:/Users/ASUS/Desktop/Linked-List/iterator.h
+node.h
+C:/Users/ASUS/Desktop/Linked-List/node.h
+
+C:/Users/ASUS/Desktop/Linked-List/list.h
+iostream
+-
+node.h
+C:/Users/ASUS/Desktop/Linked-List/node.h
+
+C:/Users/ASUS/Desktop/Linked-List/main.cpp
+iostream
+-
+forward.h
+C:/Users/ASUS/Desktop/Linked-List/forward.h
+double.h
+C:/Users/ASUS/Desktop/Linked-List/double.h
+
+C:/Users/ASUS/Desktop/Linked-List/node.h
+
