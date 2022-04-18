@@ -30,6 +30,9 @@ public:
         return current->data;
     }
 
+    Node<T>* operator->(){
+        return current;
+    }
 };
 
 

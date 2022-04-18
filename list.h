@@ -40,19 +40,50 @@ public:
             head->killSelf();
         }
     }
+    T operator[](int idx){
+        auto it = head;
+        while(idx>0){
+            it = it->next;
+            idx--;
+        }
+        return it->data;
+    }
+    bool find(T data){
+        for(auto it=head;it!=nullptr;it=it->next){
+            if(it->data==data){
+                return true;
+            }
+        }
+        return false;
+    }
+    void sort(){
+        for(auto it_1=this->head;it_1->next!=nullptr;it_1=it_1->next){
+            for(auto it_2=it_1->next;it_2!=nullptr;it_2=it_2->next){
+                if(it_1->data > it_2->data){
+                    auto temp = it_1->data;
+                    it_1->data = it_2->data;
+                    it_2->data = temp;
+                }
+            }
+        }
+    }
+    bool is_sorted(){
+        for(auto it=this->head;it->next!=nullptr;it=it->next) {
+            if (it->data > it->next->data) {
+                return false;
+            }
+        }
+        return true;
+    }
     virtual void push_front(T) = 0;
     virtual void push_back(T) = 0;
-/*    virtual T pop_front() = 0;
+    virtual T pop_front() = 0;
     virtual T pop_back() = 0;
     virtual T insert(T, int) = 0;
     virtual bool remove(T) = 0;
-    virtual T operator[](int) = 0;
-    virtual bool find(T) = 0;
-    virtual void sort() = 0;
-    virtual bool is_sorted() = 0;
-    virtual List* reverse() = 0;
-    virtual void display(std::ostream& os) = 0;
-    virtual string name() = 0; */
+    virtual void reverse() = 0;
+    virtual void display() = 0;
+    virtual string name() = 0;
 };
 
 

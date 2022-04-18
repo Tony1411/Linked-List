@@ -5,12 +5,12 @@
 using namespace std;
 
 void testSimpleLinkedList();
-//void testDoubleLinkedList();
+void testDoubleLinkedList();
 
 int main(int argc, char const *argv[]) {
-    testSimpleLinkedList();
-//    testDoubleLinkedList();
-//    cin.get();
+//    testSimpleLinkedList();
+    testDoubleLinkedList();
+    cin.get();
     return EXIT_SUCCESS;
 }
 
@@ -22,18 +22,15 @@ void testSimpleLinkedList() {
 
     for (int i = 0; i < 5; i++) {
         integers.push_front(2 * i + 1);
-    }
-
-//    integers.remove(5);
-
+    } // 9 7 5 3 1
+    integers.remove(5);
     for (ite1 = integers.begin(); ite1 != integers.end(); ++ite1) {
         cout << *ite1 << " ";
     }
-
     cout << endl << endl;
 }
 
-/*void testDoubleLinkedList() {
+void testDoubleLinkedList() {
     cout << "Doubly Linked List" << endl;
 
     DoubleList<int> integers;
@@ -41,7 +38,7 @@ void testSimpleLinkedList() {
 
     for (int i = 0; i < 5; i++) {
         integers.push_front(2 * i + 1);
-    }
+    } // 1 3 5 7
 
     ite = integers.begin();
     ++ite;
@@ -51,4 +48,4 @@ void testSimpleLinkedList() {
     --ite;
     cout << *ite << " ";
     cout << endl << endl;
-} */
+}
