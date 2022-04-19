@@ -21,7 +21,7 @@ public:
     List() : head(nullptr), tail(nullptr), nodes(0) {};
     ~List(){
         clear();
-    } ;
+    }
 
     T front() {
         return head->data;
@@ -36,9 +36,15 @@ public:
         return nodes;
     }
     void clear(){
-        if (head) {
-            head->killSelf();
+        while(head!=tail){
+            auto it = head;
+            head=head->next;
+            delete it;
         }
+        delete head;
+        head=nullptr;
+        tail=nullptr;
+        nodes=0;
     }
     T operator[](int idx){
         auto it = head;

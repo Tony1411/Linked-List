@@ -39,7 +39,7 @@ public:
 
     iterator end() {
         // TODO
-        return iterator(this->tail);
+        return iterator(nullptr);
     }
 
     void push_front(T data) override{
@@ -148,6 +148,7 @@ public:
         this->nodes--;
         auto it_2 = it->next;
         it->next = it_2->next;
+        it_2->next->prev = it;
         if(it_2 == this->tail){
             this->tail=it;
         }
@@ -177,16 +178,14 @@ public:
             cout << *ite1 << " ";
         }
         cout<<endl;
+        for (auto ite2 = this->tail; ite2 != nullptr; ite2=ite2->prev) {
+            cout << ite2->data << " ";
+        }
+        cout<<endl;
     }
     string name() override{
         string name = "Doubly Linked List";
         return name;
-    }
-
-    ~DoubleList() {
-        if (this->head) {
-            this->head->killSelf();
-        }
     }
 };
 

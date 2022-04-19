@@ -190,15 +190,10 @@ public:
         cout<<endl;
     }
     string name() override{
-        string name = "Forward List";
+        string name = "Forward Linked List";
         return name;
     }
 
-    ~ForwardList() {
-        if (this->head) {
-            this->head->killSelf();
-        }
-    }
 };
 
 

@@ -8,10 +8,10 @@ void testSimpleLinkedList();
 void testDoubleLinkedList();
 
 int main(int argc, char const *argv[]) {
-//    testSimpleLinkedList();
-    testDoubleLinkedList();
-    cin.get();
-    return EXIT_SUCCESS;
+     testSimpleLinkedList();
+     testDoubleLinkedList();
+//     cin.get();
+     return EXIT_SUCCESS;
 }
 
 void testSimpleLinkedList() {
@@ -26,7 +26,7 @@ void testSimpleLinkedList() {
     integers.remove(5);
     for (ite1 = integers.begin(); ite1 != integers.end(); ++ite1) {
         cout << *ite1 << " ";
-    }
+    } // 9 7 3 1
     cout << endl << endl;
 }
 
@@ -38,8 +38,7 @@ void testDoubleLinkedList() {
 
     for (int i = 0; i < 5; i++) {
         integers.push_front(2 * i + 1);
-    } // 1 3 5 7
-
+    } // 9 7 5 3 1
     ite = integers.begin();
     ++ite;
     cout << *ite << " ";
@@ -47,5 +46,5 @@ void testDoubleLinkedList() {
     cout << *ite << " ";
     --ite;
     cout << *ite << " ";
-    cout << endl << endl;
+//    cout << endl << endl;
 }
